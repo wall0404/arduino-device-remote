@@ -2,6 +2,7 @@
 #include "Device.h" 
 #include "Taster.h" 
 #include "SerialUSBDevice.h" 
+#include "AtenHDMISwitch.h" 
 #include <Console.h>
 
 
@@ -13,10 +14,10 @@ int MODE_SOURCE_3 = 4;
   
 
 //setup devices
-SerialUSBDevice usb;
+AtenHDMISwitch aten(7,6);
 
 //Cast specific devices into the generic class "device"
-Device *device = &usb;
+Device *device = &aten;
   
 //Setup taster
 /*
