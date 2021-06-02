@@ -3,6 +3,7 @@
 #include "Taster.h" 
 #include "SerialUSBDevice.h" 
 #include "AtenHDMISwitch.h" 
+#include "PanasonicProjector.h" 
 #include <Console.h>
 
 
@@ -15,9 +16,11 @@ int MODE_SOURCE_3 = 4;
 
 //setup devices
 AtenHDMISwitch aten(7,6);
+PanasonicProjector projector("192.168.0.235", "admin1", "panasonic");
 
 //Cast specific devices into the generic class "device"
-Device *device = &aten;
+Device *projectorDevice = &projector;
+Device *atenDevice = &aten;
   
 //Setup taster
 /*
