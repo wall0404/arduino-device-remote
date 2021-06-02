@@ -19,7 +19,7 @@ class Taster : public Observer {
         _device->turnOff();
         updateState();
       }
-      _device->notifyObservers(_mode, state);
+      _device->notifyObservers(_mode, _state);
     }
 
 
