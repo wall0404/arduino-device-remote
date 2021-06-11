@@ -25,18 +25,20 @@ Device *atenDevice = &aten;
 //Setup taster
 /*
  * Taster(int LEDPin, int TasterPin, int mode, Device *device)
- */
+ 
 Taster taster[] = {
   Taster(12,8,MODE_ONOFF,device)
-};
+};*/
 
-void setup() {}
+void setup() {
+  projector.turnOff();
+}
 
 void loop() {
   
   //call tests
   for (int i = 0; i < 1; i++) {
-    taster[i].checkIfPressed();
+    //taster[i].checkIfPressed();
   }
 
 }
